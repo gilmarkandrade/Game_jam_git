@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=1]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 1.98757
+height = 3.86447
+
+[node name="scene_1" type="Spatial"]
+
+[node name="VehicleWheel" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00521851, 0.660388, 0 )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.67861, 0.92112, 47.5018 )
+
+[node name="StaticBody2" type="StaticBody" parent="."]
+transform = Transform( 4.64796, 0, 0, 0, 4.64796, 0, 0, 0, 4.64796, 2.67861, 0.92112, -153.102 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.11899, -0.441102, 9.92491 )
+shape = SubResource( 1 )
+
+[node name="StaticBody3" type="StaticBody" parent="."]
+transform = Transform( 4.64796, 0, 0, 0, 4.64796, 0, 0, 0, 4.64796, 2.67861, 0.92112, 66.1157 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.11899, -0.441102, 9.92491 )
+shape = SubResource( 1 )
+
+[node name="StaticBody4" type="StaticBody" parent="."]
+transform = Transform( 4.64796, 0, 0, 0, 4.64796, 0, 0, 0, 4.64796, 158.379, 0.92112, -42.0678 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.11899, -0.441102, 9.92491 )
+shape = SubResource( 1 )
+
+[node name="StaticBody5" type="StaticBody" parent="."]
+transform = Transform( 4.64796, 0, 0, 0, 4.64796, 0, 0, 0, 4.64796, -68.1747, 0.92112, -42.0678 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.11899, -0.441102, 9.92491 )
+shape = SubResource( 1 )
