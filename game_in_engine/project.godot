@@ -23,6 +23,10 @@ config/icon="res://icon.png"
 
 player_singleton="*res://script/singletons/player_singleton.gd"
 
+[display]
+
+window/stretch/aspect="keep"
+
 [input]
 
 ui_move_left={

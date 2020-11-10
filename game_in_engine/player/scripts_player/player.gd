@@ -11,6 +11,7 @@ var sens = 0.2
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	pass
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -18,10 +19,12 @@ func _input(event):
 		cam.rotation.x += -deg2rad(movement.y * sens)
 		#cam.rotation.x = clamp(cam.rotation.x, deg2rad(-90), deg2rad(90))
 		rotation.y += -deg2rad(movement.x * sens)
-		#rotate_y(deg2rad(-movement.x * sens))
+		
+		
 		
 		
 func _physics_process(delta):
+	
 	if Input.is_key_pressed(KEY_ESCAPE):
 		get_tree().quit()
 
@@ -29,34 +32,41 @@ func _physics_process(delta):
 	
 	if Input.is_action_pressed("ui_move_impulse"):
 		local_direction = global_direction.rotated(Vector3(0,1,0), rotation.y)
-		move = local_direction * (speed*15)
+		move += local_direction * (speed*1.5)
 			
 		
 		move.y = 0
 	
-	elif Input.is_action_pressed("ui_move_left"):
-		
-		if move.x < max_speed:
-			move.x += speed
-		else:
-			move.x = + max_speed
-	
-	elif Input.is_action_pressed("ui_move_right"):
-		
-		if move.x > -max_speed:
-			move.x -= speed
-		else:
-			move.x = - max_speed
-	
+		"""elif Input.is_action_pressed("ui_move_left"):
+				
+				if move.x < max_speed:
+					move.x += speed
+				else:
+					move.x = + max_speed
+			
+			elif Input.is_action_pressed("ui_move_right"):
+				
+				if move.x > - max_speed:
+					move.x -= speed
+				else:
+					move.x = - max_speed
+					
+			elif Input.is_action_just_released("ui_right"):
+				
+				while move.x < 0:
+					move.x += 0.5
+				print(move.x)
+				move.x = 0 """
+			
 	elif Input.is_action_pressed("ui_move_cima"):
 		
 		if move.y < max_speed:
 			move.y += speed
 		else:
 			move.y = + max_speed
-	
-	elif Input.is_action_pressed("ui_move_down"):
 		
+	elif Input.is_action_pressed("ui_move_down"):
+			
 		if move.y > -max_speed:
 			move.y -= speed
 		else:
@@ -64,21 +74,21 @@ func _physics_process(delta):
 			
 	else:
 		
-		if  move.z > 0:
+		"""if  move.z > 0:
 			move.z -= 0.3
 				
 		elif  move.z < 0:
-			move.z += 0.3
+			move.z += 0.3"""
 			
 		if move.x > 0:
 			move.x -= 0.3
-			
+				
 		elif move.x < 0:
 			move.x += 0.3
-			
+				
 		if move.y < 0:
-			move.y += 0.3
-			
+				move.y += 0.3
+				
 		elif move.y > 0:
 			move.y -= 0.3
 			

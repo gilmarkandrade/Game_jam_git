@@ -10,18 +10,6 @@ albedo_color = Color( 1, 0.976471, 0.976471, 1 )
 
 [node name="scene_1" type="Spatial"]
 
-[node name="StaticBody2" type="StaticBody" parent="."]
-transform = Transform( 4.64796, 0, 0, 0, 4.64796, 0, 0, 0, 4.64796, 2.67861, 0.92112, -153.102 )
-
-[node name="StaticBody3" type="StaticBody" parent="."]
-transform = Transform( 4.64796, 0, 0, 0, 4.64796, 0, 0, 0, 4.64796, 2.67861, 0.92112, 66.1157 )
-
-[node name="StaticBody4" type="StaticBody" parent="."]
-transform = Transform( 4.64796, 0, 0, 0, 4.64796, 0, 0, 0, 4.64796, 158.379, 0.92112, -42.0678 )
-
-[node name="StaticBody5" type="StaticBody" parent="."]
-transform = Transform( 4.64796, 0, 0, 0, 4.64796, 0, 0, 0, 4.64796, -68.1747, 0.92112, -42.0678 )
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 2 )
 

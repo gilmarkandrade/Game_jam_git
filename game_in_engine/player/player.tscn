@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://player/scripts_player/player.gd" type="Script" id=1]
 [ext_resource path="res://player/scripts_player/Camera.gd" type="Script" id=2]
+[ext_resource path="res://assets/panel/place holder panel.png" type="Texture" id=3]
 
 [node name="player" type="KinematicBody"]
 script = ExtResource( 1 )
@@ -10,8 +11,12 @@ script = ExtResource( 1 )
 polygon = PoolVector2Array( 0, 0 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( -0.996234, 0, -0.0867037, 0, 1, 0, 0.0867037, 0, -0.996234, 0, 0, -0.968673 )
+transform = Transform( -0.999554, 0, -0.0298756, 0, 1, 0, 0.0298756, 0, -0.999554, 0, 0, -0.968673 )
 keep_aspect = 0
 current = true
 fov = 85.1136
 script = ExtResource( 2 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Camera"]
+transform = Transform( 0.79935, 0, 0, 0, 0.846323, 0, 0, 0, 0.999992, -0.178591, -0.0483079, -5.35971 )
+texture = ExtResource( 3 )
