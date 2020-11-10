@@ -53,4 +53,4 @@ ui_move_impulse={
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://envorimentspace.tres"
